@@ -5,15 +5,23 @@
   
 
   
-  <title>Archives: 2020/11 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1.设置Process Monitor 获取文件和注册表访问 抓取网络包 在github下载示例wsample01b.exe &#96;运行结果为Copied 用ollldbg 洞察程序详细逻辑  olldbg有四个窗口  各个窗口的功能以后慢慢学 现在先在反汇编窗口按ctrl+g 在单击右键弹出的菜单点击Go to  Expression 跳转到地址00401000 这时会弹出汇编窗口  现在看不懂没关">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://gala133.github.io/archives/2020/11/index.html">
+<meta property="og:url" content="https://gala133.github.io/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.设置Process Monitor 获取文件和注册表访问 抓取网络包 在github下载示例wsample01b.exe &#96;运行结果为Copied 用ollldbg 洞察程序详细逻辑  olldbg有四个窗口  各个窗口的功能以后慢慢学 现在先在反汇编窗口按ctrl+g 在单击右键弹出的菜单点击Go to  Expression 跳转到地址00401000 这时会弹出汇编窗口  现在看不懂没关">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/12/23/Sjl4Zb2iBMhtJuL.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/23/oP3d8Au5QxWIZGO.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/23/Z8B3uA1RgyYhNOa.png">
+<meta property="article:published_time" content="2020-12-23T12:45:41.315Z">
+<meta property="article:modified_time" content="2020-12-23T15:14:49.441Z">
 <meta property="article:author" content="gala133">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/12/23/Sjl4Zb2iBMhtJuL.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,72 +70,58 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/30/pwn%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2020-11-30T12:15:31.658Z" itemprop="datePublished">Nov 30</time>
+        <section id="main"><article id="post-尝试动态分析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" class="article-date">
+  <time datetime="2020-12-23T12:45:41.315Z" itemprop="datePublished">2020-12-23</time>
 </a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/30/pwn%E5%B7%A5%E5%85%B7/">pwn工具安装</a>
-    </h1>
-  
-
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/30/%E5%B0%9D%E8%AF%95%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/" class="archive-article-date">
-  <time datetime="2020-11-30T11:32:34.319Z" itemprop="datePublished">Nov 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/11/30/%E6%B3%A8%E5%86%8C%E8%A1%A8%E8%AE%BF%E9%97%AE/" class="archive-article-date">
-  <time datetime="2020-11-30T10:33:35.210Z" itemprop="datePublished">Nov 30</time>
-</a>
+        <p>1.设置Process Monitor</p>
+<p><strong>获取文件和注册表访问</strong></p>
+<p><strong>抓取网络包</strong></p>
+<p>在github下载示例wsample01b.exe</p>
+<p>`运行结果为Copied</p>
+<p>用ollldbg 洞察程序详细逻辑</p>
+<p><img src="https://i.loli.net/2020/12/23/Sjl4Zb2iBMhtJuL.png" alt="图片.png"></p>
+<p>olldbg有四个窗口</p>
+<p><img src="https://i.loli.net/2020/12/23/oP3d8Au5QxWIZGO.png" alt="图片.png"></p>
+<p>各个窗口的功能以后慢慢学</p>
+<p>现在先在反汇编窗口按ctrl+g</p>
+<p>在单击右键弹出的菜单点击Go to  Expression</p>
+<p>跳转到地址00401000</p>
+<p>这时会弹出汇编窗口</p>
+<p><img src="https://i.loli.net/2020/12/23/Z8B3uA1RgyYhNOa.png" alt="图片.png"></p>
+<p>现在看不懂没关系 我们在0040000设置断点</p>
+<p>逐条运行就可以分析到程序行为了</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/30/%E6%B3%A8%E5%86%8C%E8%A1%A8%E8%AE%BF%E9%97%AE/">注册表访问</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gala133.github.io/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" data-id="ckj1ljfvj0005gktu99vg23po" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/11/30/pwn%E5%B7%A5%E5%85%B7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">pwn工具安装</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         

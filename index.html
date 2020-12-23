@@ -64,6 +64,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-尝试动态分析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" class="article-date">
+  <time datetime="2020-12-23T12:45:41.315Z" itemprop="datePublished">2020-12-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.设置Process Monitor</p>
+<p><strong>获取文件和注册表访问</strong></p>
+<p><strong>抓取网络包</strong></p>
+<p>在github下载示例wsample01b.exe</p>
+<p>`运行结果为Copied</p>
+<p>用ollldbg 洞察程序详细逻辑</p>
+<p><img src="https://i.loli.net/2020/12/23/Sjl4Zb2iBMhtJuL.png" alt="图片.png"></p>
+<p>olldbg有四个窗口</p>
+<p><img src="https://i.loli.net/2020/12/23/oP3d8Au5QxWIZGO.png" alt="图片.png"></p>
+<p>各个窗口的功能以后慢慢学</p>
+<p>现在先在反汇编窗口按ctrl+g</p>
+<p>在单击右键弹出的菜单点击Go to  Expression</p>
+<p>跳转到地址00401000</p>
+<p>这时会弹出汇编窗口</p>
+<p><img src="https://i.loli.net/2020/12/23/Z8B3uA1RgyYhNOa.png" alt="图片.png"></p>
+<p>现在看不懂没关系 我们在0040000设置断点</p>
+<p>逐条运行就可以分析到程序行为了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gala133.github.io/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" data-id="ckj1ljfvj0005gktu99vg23po" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-pwn工具" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/30/pwn%E5%B7%A5%E5%85%B7/" class="article-date">
@@ -109,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/11/30/pwn%E5%B7%A5%E5%85%B7/" data-id="cki4jq8di0004jwtu9b4i3bxb" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/11/30/pwn%E5%B7%A5%E5%85%B7/" data-id="ckj1ljfvj0004gktudxeb5bh7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/11/30/%E5%B0%9D%E8%AF%95%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/" data-id="cki4jq8dj0005jwtu7yeh9tlo" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/11/30/%E5%B0%9D%E8%AF%95%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/" data-id="ckj1ljfvk0006gktu2rw08x2n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/11/30/%E6%B3%A8%E5%86%8C%E8%A1%A8%E8%AE%BF%E9%97%AE/" data-id="cki4jq8dl0007jwtu9t3b9my1" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/11/30/%E6%B3%A8%E5%86%8C%E8%A1%A8%E8%AE%BF%E9%97%AE/" data-id="ckj1ljfvm0008gktu4e9j5jvi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -242,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/10/31/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="cki4jq8dk0006jwtuhmke7kbr" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/10/31/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ckj1ljfvl0007gktu3dkt7j9a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -279,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/10/26/burpsuite%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" data-id="cki4jq8dg0002jwtuem6p1qbg" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/10/26/burpsuite%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" data-id="ckj1ljfu80001gktuf21d6577" class="article-share-link">Share</a>
       
       
     </footer>
@@ -352,7 +395,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/10/19/PHP%E7%AC%94%E8%AE%B01/" data-id="cki4jq8dd0001jwtu0hegf8cu" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/10/19/PHP%E7%AC%94%E8%AE%B01/" data-id="ckj1ljfvg0002gktu8s3x34so" class="article-share-link">Share</a>
       
       
     </footer>
@@ -403,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/10/19/C/" data-id="cki4jq8d40000jwtu37p4b4n8" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/10/19/C/" data-id="ckj1ljfs40000gktu3sn79982" class="article-share-link">Share</a>
       
       
     </footer>
@@ -452,7 +495,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gala133.github.io/2020/10/19/hello-world/" data-id="cki4jq8dh0003jwtuhcia6mpx" class="article-share-link">Share</a>
+      <a data-url="https://gala133.github.io/2020/10/19/hello-world/" data-id="ckj1ljfvi0003gktu4n6c1158" class="article-share-link">Share</a>
       
       
     </footer>
@@ -480,7 +523,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
     </div>
   </div>
 
@@ -491,6 +534,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2020/11/30/pwn%E5%B7%A5%E5%85%B7/">pwn工具安装</a>
@@ -506,10 +553,6 @@
         
           <li>
             <a href="/2020/10/31/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/26/burpsuite%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">(no title)</a>
           </li>
         
       </ul>
