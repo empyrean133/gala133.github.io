@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>常用汇编语言使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.没必要记住所有汇编语言 毕竟我们不是开发程序的 记住常用汇编指令  表示地址变化模式，具体如下：   中保存内存的地址，如果后面加上！，指令执行完成后，rn的值会更新，等于下一个内存的地址，否则保持初始值。 4）表示寄存器列表，对于ldm指令，从所对应的内存块中读取数据写入这些寄存器，对于stm把这些寄存器的值写入 对应的内存块中。如果寄存器地址连续，可以写成r1-rx的格式，不连续的用逗号隔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用汇编语言使用">
+<meta property="og:url" content="https://gala133.github.io/2020/12/23/%E5%B8%B8%E7%94%A8%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.没必要记住所有汇编语言 毕竟我们不是开发程序的 记住常用汇编指令  表示地址变化模式，具体如下：   中保存内存的地址，如果后面加上！，指令执行完成后，rn的值会更新，等于下一个内存的地址，否则保持初始值。 4）表示寄存器列表，对于ldm指令，从所对应的内存块中读取数据写入这些寄存器，对于stm把这些寄存器的值写入 对应的内存块中。如果寄存器地址连续，可以写成r1-rx的格式，不连续的用逗号隔">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/12/23/fB8nqtphwNJYQdX.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/23/39nF6l2mv8rCkMe.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1450264/201808/1450264-20180808102707441-1952984335.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1450264/201808/1450264-20180808112109282-437569868.png">
+<meta property="article:published_time" content="2020-12-23T15:14:57.677Z">
+<meta property="article:modified_time" content="2020-12-23T15:59:59.967Z">
+<meta property="article:author" content="gala133">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/12/23/fB8nqtphwNJYQdX.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://gala133.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-常用汇编语言使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/23/%E5%B8%B8%E7%94%A8%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2020-12-23T15:14:57.677Z" itemprop="datePublished">2020-12-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      常用汇编语言使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.没必要记住所有汇编语言 毕竟我们不是开发程序的</p>
+<p>记住常用汇编指令</p>
+<p><img src="https://i.loli.net/2020/12/23/fB8nqtphwNJYQdX.png" alt="图片.png"></p>
+<p><addresing_mode>表示地址变化模式，具体如下：</p>
+<p><img src="https://i.loli.net/2020/12/23/39nF6l2mv8rCkMe.png" alt="图片.png"></p>
+<p><rn> 中保存内存的地址，如果后面加上！，指令执行完成后，rn的值会更新，等于下一个内存的地址，否则保持初始值。</p>
+<p>4）<register list>表示寄存器列表，对于ldm指令，从<rn>所对应的内存块中读取数据写入这些寄存器，对于stm把这些寄存器的值写入</p>
+<p><rn>对应的内存块中。如果寄存器地址连续，可以写成r1-rx的格式，不连续的用逗号隔开。^符号有两种含义：如果<register list>有pc寄存器，</p>
+<p>它表示指令执行后，spsr寄存中的值将自动复制到cpsr寄存器中–这通常用于中断处理函数的返回；如果没有pc寄存器，那^表示操作的是</p>
+<p>用户模式下的寄存器，而不是当前特权模式下的寄存器。</p>
+<p>5）指令中<register list>与<rn>的对应关系为：编号低的寄存器对应内存中低地址单元，编号高的寄存器对应内存中高地址单元，具体如下：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1450264/201808/1450264-20180808102707441-1952984335.png" alt="img"></p>
+<p> 扩展：</p>
+<p> ldmfd</p>
+<p> stmfd</p>
+<p><img src="https://images2018.cnblogs.com/blog/1450264/201808/1450264-20180808112109282-437569868.png" alt="img"></p>
+<p>*.算术指令**</p>
+<p>加指令：add </p>
+<p>add r1，r2，#1   /<em>r1=r2+1</em>/</p>
+<p>减指令：sub </p>
+<p>sub  r1，r2，#1   /<em>r1=r2-1</em>/</p>
+<p>乘指令：mul </p>
+<p>mul r1，r2，#4   /<em>r1=r2</em>4*/</p>
+<p><strong>.程序状态寄存器的访问指令</strong> </p>
+<p>msr cpsr， r0  /* s&lt;-r，r0的值复制到cpsr中*/  </p>
+<p>mrs  r0，cpsr  /<em>r&lt;-s，将cpsr的值复制到r0中</em>/</p>
+<p><strong>相对跳转指令b，bl</strong></p>
+<p>1）这两条指令的区别在于bl除了跳转以外，还将返回地址（bl的下一条指令地址）保存在lr寄存器中</p>
+<p>2）这两条指令的跳转范围是当前指令前后32M范围内</p>
+<p>3）他们是位置无关的指令，相对跳转</p>
+<p>e.g:</p>
+<p>b fun1</p>
+<p>fun1：</p>
+<p>　　bl fun2</p>
+<p>fun2：</p>
+<p>　　…………..</p>
+<p>扩展：绝对跳转 ldr pc，=xxx</p>
+<p>直接将要执行的指令地址存入pc中，pc为程序计数器，指向当前指向位置</p>
+<p> <strong>其他指令</strong></p>
+<p>比较指令：cmp</p>
+<p>cmp r1，r2 /*根据对比的结果设置cpsr寄存器的标志位，参考ARM指令条件码表</p>
+<p>逻辑指令</p>
+<p>位与：and（相当于&amp;）</p>
+<p>and r0，r1，#0xff  /<em>r0=r1&amp;0xff</em>/</p>
+<p>位或：orr（相当于|）</p>
+<p>orr r0，r1，#0xff  /<em>r0=r1|0xff</em>/</p>
+<p>清零：bic </p>
+<p>bic r0，r0，#0x03  /<em>将r0中的第一位和第二位清零</em>/</p>
+<p>测试：tst </p>
+<p>tst r0，#0x20  /<em>测试第六位是否为0，为0则将cpsr的Z位置1</em>/</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gala133.github.io/2020/12/23/%E5%B8%B8%E7%94%A8%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/" data-id="ckj1m8h5c0007octubiea2pne" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/23/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E6%B4%9E%E5%AF%9F%E7%A8%8B%E5%BA%8F%E8%A1%8C%E4%B8%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">尝试动态分析</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/23/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4%E6%B4%9E%E5%AF%9F%E7%A8%8B%E5%BA%8F%E8%A1%8C%E4%B8%BA/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/23/%E5%B8%B8%E7%94%A8%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/">常用汇编语言使用</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/23/%E5%B0%9D%E8%AF%95%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/">尝试动态分析</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/30/pwn%E5%B7%A5%E5%85%B7/">pwn工具安装</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/30/%E5%B0%9D%E8%AF%95%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 gala133<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
